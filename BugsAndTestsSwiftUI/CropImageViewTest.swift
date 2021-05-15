@@ -7,14 +7,13 @@
 //
 
 import SwiftUI
-import CropImageView
 
-struct ContentView: View {
+struct CropImageViewTest: View {
     @State var showCropView = false
     @State private var cropedImage: UIImage?
     
     var inputImage: UIImage {
-        return UIImage(named: "demo") ??  UIImage(systemName: "sun.haze.fill")!
+        return UIImage(named: "paris") ??  UIImage(systemName: "sun.haze.fill")!
     }
     
     var body: some View {
@@ -42,8 +41,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CropImageViewTest_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CropImageViewTest()
     }
 }

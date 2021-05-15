@@ -35,7 +35,21 @@ struct RectHole: Shape {
 @available(iOS 13.0, OSX 10.15, *)
 public struct CropImageView: View {
      
-    @State private var dragAmount = CGSize.zero
+    @State private var location: CGPoint = .zero
+    @GestureState private var fingerLocation: CGPoint? = nil
+    @GestureState private var startLocation: CGPoint? = nil // 1
+        
+        var simpleDrag: some Gesture {
+            DragGesture()
+                .onChanged { value in
+                    var newLocation = startLocation ?? location // 3
+                    newLocation.x += value.translation.width
+                    newLocation.y += value.translation.height
+                    self.location = newLocation
+                }.updating($startLocation) { (value, startLocation, transaction) in
+                    startLocation = startLocation ?? location // 2
+                }
+        }
     @State private var scale: CGFloat = 1.0
     
     @State private var clipped = false
@@ -59,38 +73,9 @@ public struct CropImageView: View {
         self.cropSize = cropSize
     }
 
-    var imageView: some View {
-        Image(uiImage: inputImage)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            
-            
-            // 缩放
-            .gesture(MagnificationGesture()
-                .onChanged { value in
-                    self.scale = value.magnitude
-                }
-        )
-            // 拖拽
-            .highPriorityGesture(
-                DragGesture()
-                    .onChanged { value in
-                         self.dragAmount = value.translation
-                }
-                .onEnded { value in
-                    self.dragAmount = value.translation
-                }
-        )
-            
-            //点击放大
-            .gesture(
-                TapGesture()
-                    .onEnded { _ in
-                        self.scale += 0.1
-                        print("\(self.scale)")
-                }
-        )
-    }
+//    var imageView: some View = {
+//
+//    }
     
     public var body: some View {
         GeometryReader { proxy  in
@@ -99,10 +84,33 @@ public struct CropImageView: View {
                     if self.clipped {
                         self.result?.resizable().scaledToFit().frame(width:self.cropSize.width,height: self.cropSize.height).overlay(Rectangle().stroke(Color.blue,lineWidth: 2))
                     } else {
-                        self.imageView
+                        Image(uiImage: inputImage)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            
+                            .offset(CGSize(width: location.x, height: location.y))
+                            // 缩放
+                            .gesture(MagnificationGesture()
+                //                .onChanged { value in
+                //                    self.scale = value.magnitude
+                //                }
+                        )
+                            // 拖拽
+                            .highPriorityGesture(
+                                simpleDrag
+                        )
+                            
+                            //点击放大
+//                            .gesture(
+//                                TapGesture()
+//                                    .onEnded { _ in
+//                                        self.scale += 0.1
+//                                        print("\(self.scale)")
+//                                }
+//                        )
                             .scaleEffect(self.scale)
-                            .offset(self.dragAmount)
-                            .animation(.easeInOut)
+                            
+                            //.animation(.linear)
                         //                    .scaledToFit()
                     }
                     
@@ -173,7 +181,7 @@ public struct CropImageView: View {
                 }
                 .accentColor(.accentColor)
             }
-            .padding()
+            //.padding()
         }
     }
     
@@ -188,15 +196,16 @@ public struct CropImageView: View {
         
 //        print("imageView size:\(size), image size:\(imsize), aspectScale:\(scale),zoomScale:\(zoomScale)，currentPostion:\(dragAmount)")
  
-        let currentPositionWidth = self.dragAmount.width * scale
-            let currentPositionHeight = self.dragAmount.height * scale
+        let currentPositionWidth = self.location.x * scale
+        let currentPositionHeight = self.location.y * scale
         
         let croppedImsize = CGSize(width: (self.cropSize.width * scale) / zoomScale, height: (self.cropSize.height * scale) / zoomScale)
          
-        let xOffset = (( imsize.width - croppedImsize.width) / 2.0) - (currentPositionWidth  / zoomScale)
-        let yOffset = (( imsize.height - croppedImsize.height) / 2.0) - (currentPositionHeight  / zoomScale)
+        let xOffset = (( imsize.width - croppedImsize.width) / 2.0) - (currentPositionWidth)
+        let yOffset = (( imsize.height - croppedImsize.height) / 2.0) - (currentPositionHeight)
         let croppedImrect: CGRect = CGRect(x: xOffset, y: yOffset, width: croppedImsize.width, height: croppedImsize.height)
-              
+        
+        
 //        print("croppedImsize:\(croppedImsize),croppedImrect:\(croppedImrect)")
         if let cropped = inputImage.cgImage?.cropping(to: croppedImrect) {
             let croppedIm = UIImage(cgImage: cropped)
@@ -209,6 +218,6 @@ public struct CropImageView: View {
 struct CropImageView_Previews: PreviewProvider {
     @State static var result: UIImage?
     static var previews: some View {
-        CropImageView(inputImage: UIImage(systemName: "sun.haze.fill")!, resultImage: self.$result,cropSize: .init(width: 200, height: 200))
+        CropImageView(inputImage: UIImage(named: "paris")!, resultImage: self.$result,cropSize: .init(width: 220, height: 200))
     }
 }

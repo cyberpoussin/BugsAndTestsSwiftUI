@@ -12,8 +12,18 @@
 		7AD8526C25498C2800FD8A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8526B25498C2800FD8A90 /* Assets.xcassets */; };
 		7AD8526F25498C2800FD8A90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8526E25498C2800FD8A90 /* Preview Assets.xcassets */; };
 		7AD9A81F255B02E000DF35DD /* BindingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD9A81E255B02E000DF35DD /* BindingList.swift */; };
+		8493BF35264BC0DD00CF131C /* CropImageViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493BF34264BC0DD00CF131C /* CropImageViewTest.swift */; };
+		8493BF37264BC0E500CF131C /* CropImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493BF36264BC0E500CF131C /* CropImageView.swift */; };
+		8493BF39264BC38900CF131C /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493BF38264BC38900CF131C /* SwiftUIView.swift */; };
+		8493BF3B264BD1BE00CF131C /* CodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493BF3A264BD1BD00CF131C /* CodeScannerView.swift */; };
+		8493BF3E264C0AD400CF131C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493BF3D264C0AD400CF131C /* APIManager.swift */; };
+		8493BF40264C113F00CF131C /* UPCItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493BF3F264C113E00CF131C /* UPCItem.swift */; };
+		8493BF42264C127C00CF131C /* UPCItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493BF41264C127C00CF131C /* UPCItemTest.swift */; };
+		8493BF44264D221700CF131C /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493BF43264D221700CF131C /* PermissionManager.swift */; };
 		84AF8A5525B758320096C840 /* ProtocolTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF8A5425B758320096C840 /* ProtocolTestView.swift */; };
 		84DBEB2725874537008DC8B9 /* RedrawTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBEB2625874537008DC8B9 /* RedrawTest.swift */; };
+		84F108C5264D792A00E769CC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F108C4264D792A00E769CC /* ImagePicker.swift */; };
+		84F108C9264D886100E769CC /* PermissionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F108C8264D886100E769CC /* PermissionAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +34,18 @@
 		7AD8526E25498C2800FD8A90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7AD8527025498C2800FD8A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AD9A81E255B02E000DF35DD /* BindingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingList.swift; sourceTree = "<group>"; };
+		8493BF34264BC0DD00CF131C /* CropImageViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropImageViewTest.swift; sourceTree = "<group>"; };
+		8493BF36264BC0E500CF131C /* CropImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropImageView.swift; sourceTree = "<group>"; };
+		8493BF38264BC38900CF131C /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		8493BF3A264BD1BD00CF131C /* CodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScannerView.swift; sourceTree = "<group>"; };
+		8493BF3D264C0AD400CF131C /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		8493BF3F264C113E00CF131C /* UPCItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCItem.swift; sourceTree = "<group>"; };
+		8493BF41264C127C00CF131C /* UPCItemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCItemTest.swift; sourceTree = "<group>"; };
+		8493BF43264D221700CF131C /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		84AF8A5425B758320096C840 /* ProtocolTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTestView.swift; sourceTree = "<group>"; };
 		84DBEB2625874537008DC8B9 /* RedrawTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedrawTest.swift; sourceTree = "<group>"; };
+		84F108C4264D792A00E769CC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		84F108C8264D886100E769CC /* PermissionAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +82,14 @@
 				84DBEB2625874537008DC8B9 /* RedrawTest.swift */,
 				7AD8526725498C2800FD8A90 /* MyProductApp.swift */,
 				7AD8526925498C2800FD8A90 /* ContentView.swift */,
+				8493BF34264BC0DD00CF131C /* CropImageViewTest.swift */,
+				8493BF36264BC0E500CF131C /* CropImageView.swift */,
+				8493BF3A264BD1BD00CF131C /* CodeScannerView.swift */,
+				8493BF43264D221700CF131C /* PermissionManager.swift */,
+				84F108C8264D886100E769CC /* PermissionAlert.swift */,
+				84F108C4264D792A00E769CC /* ImagePicker.swift */,
+				8493BF3C264C0ACB00CF131C /* Scan */,
+				8493BF38264BC38900CF131C /* SwiftUIView.swift */,
 				84AF8A5425B758320096C840 /* ProtocolTestView.swift */,
 				7AD8526B25498C2800FD8A90 /* Assets.xcassets */,
 				7AD8527025498C2800FD8A90 /* Info.plist */,
@@ -76,6 +104,16 @@
 				7AD8526E25498C2800FD8A90 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8493BF3C264C0ACB00CF131C /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				8493BF3D264C0AD400CF131C /* APIManager.swift */,
+				8493BF3F264C113E00CF131C /* UPCItem.swift */,
+				8493BF41264C127C00CF131C /* UPCItemTest.swift */,
+			);
+			path = Scan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,10 +186,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD8526A25498C2800FD8A90 /* ContentView.swift in Sources */,
+				8493BF3B264BD1BE00CF131C /* CodeScannerView.swift in Sources */,
+				8493BF3E264C0AD400CF131C /* APIManager.swift in Sources */,
+				84F108C5264D792A00E769CC /* ImagePicker.swift in Sources */,
+				84F108C9264D886100E769CC /* PermissionAlert.swift in Sources */,
 				84AF8A5525B758320096C840 /* ProtocolTestView.swift in Sources */,
+				8493BF39264BC38900CF131C /* SwiftUIView.swift in Sources */,
+				8493BF40264C113F00CF131C /* UPCItem.swift in Sources */,
+				8493BF44264D221700CF131C /* PermissionManager.swift in Sources */,
 				7AD8526825498C2800FD8A90 /* MyProductApp.swift in Sources */,
+				8493BF42264C127C00CF131C /* UPCItemTest.swift in Sources */,
 				7AD9A81F255B02E000DF35DD /* BindingList.swift in Sources */,
+				8493BF35264BC0DD00CF131C /* CropImageViewTest.swift in Sources */,
 				84DBEB2725874537008DC8B9 /* RedrawTest.swift in Sources */,
+				8493BF37264BC0E500CF131C /* CropImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BugsAndTestsSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 62724PC466;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BugsAndTestsSwiftUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -303,7 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BugsAndTestsSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 62724PC466;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BugsAndTestsSwiftUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

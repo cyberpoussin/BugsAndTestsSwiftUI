@@ -6,10 +6,76 @@
 //
 
 import SwiftUI
+import AVFoundation
+
+enum SheetType: String, Identifiable {
+    case scanner, photoLibrary, camera
+    var id: String {
+        return self.rawValue
+    }
+}
 
 struct SwiftUIView: View {
+    @State var isPresenting: SheetType?
+    @State var scannedCode: String?
+    @State var selectedImage: UIImage?
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack(spacing: 10) {
+                if self.scannedCode != nil {
+                    NavigationLink("Next page", destination: Text("haha : \(scannedCode!)"), isActive: .constant(true)).hidden()
+                }
+
+                Button("Scan Code") {
+                    self.isPresenting = .scanner
+                }
+                
+                Button("Photo lib") {
+                    self.isPresenting = .photoLibrary
+                }
+                
+                Button("Camera") {
+                    self.isPresenting = .camera
+                }
+                
+                Button("Permissions") {
+                    AVCaptureDevice.requestAccess(for: .video) {_ in 
+                        
+                    }
+                }
+
+                Text("-----")
+                    .onAppear {
+                        scannedCode = nil
+                    }
+                    
+                    .sheet(item: $isPresenting) {sheet in
+                        switch sheet {
+                        case .scanner:
+                            scannerSheet
+                        case .photoLibrary:
+                            ImagePicker(sourceType: .photoLibrary, selectedImage: $selectedImage)
+                        case .camera:
+                            ImagePicker(sourceType: .camera, selectedImage: $selectedImage)
+                                .edgesIgnoringSafeArea(.all)
+                        }
+                    }
+            }
+        }
+    }
+
+    var scannerSheet: some View {
+        CodeScannerView(
+            codeTypes: [.ean13],
+            showViewfinder: true,
+            simulatedDatas: ["000", "111"],
+            completion: { result in
+                if case let .success(code) = result {
+                    self.scannedCode = code
+                    self.isPresenting = nil
+                }
+            }
+        )
     }
 }
 

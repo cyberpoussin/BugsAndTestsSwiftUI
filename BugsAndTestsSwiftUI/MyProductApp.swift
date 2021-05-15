@@ -15,7 +15,13 @@ struct MyProductApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            SwiftLogoAnimation()
+            Button("redemander") {
+                PermissionManager.shared.requestAccess(.cameraUsage) { granted in
+                    
+                }
+            }
+            Text("hihi")
+                .modifier(PermissionAlert())
         }
     }
 }
