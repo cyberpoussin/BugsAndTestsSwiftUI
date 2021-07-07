@@ -93,7 +93,7 @@ extension APIManager {
 
 extension APIManager {
     
-    func fetch<Endpoint: RequestBuilder>(request: Endpoint) -> AnyPublisher<Endpoint.ResponseType, NetworkRequestError>{
+    func dataTask<Endpoint: RequestBuilder>(request: Endpoint) -> AnyPublisher<Endpoint.ResponseType, NetworkRequestError>{
         guard let request = request.url else { return Fail(error: NetworkRequestError.invalidRequest).eraseToAnyPublisher() }
         return session.dataTaskPublisher(for: request)
             .tryMap {(data, response) -> Data in
@@ -112,6 +112,8 @@ extension APIManager {
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
+    
+    
     
     func request<Endpoint: RequestBuilder>(with requestBuilder: Endpoint) -> AnyPublisher<Endpoint.ResponseType?, Never> {
         guard let request = requestBuilder.url else { return Just(nil).eraseToAnyPublisher() }

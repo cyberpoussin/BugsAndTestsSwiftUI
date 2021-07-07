@@ -9,19 +9,18 @@ import SwiftUI
 
 @main
 struct MyProductApp: App {
-    init() {
-        
-        
-    }
+    @StateObject var environmentStore = GLobalStore()
     var body: some Scene {
         WindowGroup {
-            Button("redemander") {
-                PermissionManager.shared.requestAccess(.cameraUsage) { granted in
-                    
-                }
-            }
-            Text("hihi")
-                .modifier(PermissionAlert())
+            MainTest()
+                .environmentObject(environmentStore)
+//            Button("redemander") {
+//                PermissionManager.shared.requestAccess(.cameraUsage) { granted in
+//
+//                }
+//            }
+//            Text("hihi")
+//                .modifier(PermissionAlert())
         }
     }
 }

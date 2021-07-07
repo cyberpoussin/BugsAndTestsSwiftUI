@@ -9,12 +9,29 @@ import SwiftUI
 
 struct AnotherTestLayout: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack {
+                ForEach(users) {user in
+                    HStack {
+                        Text(user.rank.description)
+                        Text(user.name)
+                            .lineLimit(1)
+                        Text(user.steps.description)
+                        Text(user.trees.description)
+                    }
+                }
+            }
+        }
     }
 }
 
 struct AnotherTestLayout_Previews: PreviewProvider {
     static var previews: some View {
-        AnotherTestLayout()
+        Group {
+            AnotherTestLayout()
+                .previewDevice("iPad Pro (12.9-inch) (5th generation)")
+            AnotherTestLayout()
+                .previewDevice("iPhone 8")
+        }
     }
 }

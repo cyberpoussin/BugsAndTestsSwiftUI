@@ -15,7 +15,7 @@ enum SheetType: String, Identifiable {
     }
 }
 
-struct SwiftUIView: View {
+struct TestsImagesAndScanner: View {
     @State var isPresenting: SheetType?
     @State var scannedCode: String?
     @State var selectedImage: UIImage?
@@ -79,8 +79,8 @@ struct SwiftUIView: View {
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct TestsImagesAndScanner_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView()
+        TestsImagesAndScanner()
     }
 }

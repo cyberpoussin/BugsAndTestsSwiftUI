@@ -16,7 +16,7 @@ struct UPCItemTest: View {
                 Text(item.title)
             }
             Button("Fetch") {
-                APISession().fetch(request: Endpoint<UPCItemRequest?>.fetchItem(upc: "885909950805"))
+                APISession().dataTask(request: Endpoint<UPCItemRequest?>.fetchItem(upc: "885909950805"))
                     .replaceError(with: nil)
                     .sink { value in
                         self.item = value?.item
