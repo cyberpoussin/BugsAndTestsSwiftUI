@@ -10,7 +10,6 @@ import SwiftUI
 import AVFoundation
 
 struct PermissionAlert: ViewModifier {
-    @State private var isPresented: Bool = false
     @State private var alertMsg: String = ""
     @ObservedObject var permissionManager = PermissionManager.shared
     func body(content: Content) -> some View {

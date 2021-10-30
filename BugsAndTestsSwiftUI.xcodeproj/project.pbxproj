@@ -25,6 +25,12 @@
 		8493BF44264D221700CF131C /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493BF43264D221700CF131C /* PermissionManager.swift */; };
 		84AF8A5525B758320096C840 /* ProtocolTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF8A5425B758320096C840 /* ProtocolTestView.swift */; };
 		84DBEB2725874537008DC8B9 /* RedrawTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBEB2625874537008DC8B9 /* RedrawTest.swift */; };
+		84DE51CF26F7A5EC00E26FE0 /* TestMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE51CC26F7A5EB00E26FE0 /* TestMapView.swift */; };
+		84DE51D026F7A5EC00E26FE0 /* TestLazyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE51CD26F7A5EB00E26FE0 /* TestLazyGrid.swift */; };
+		84DE51D126F7A5EC00E26FE0 /* TestPolyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE51CE26F7A5EC00E26FE0 /* TestPolyMap.swift */; };
+		84DE51E126F7A90E00E26FE0 /* MultipleSelectionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE51DF26F7A90E00E26FE0 /* MultipleSelectionPicker.swift */; };
+		84DE51E226F7A90E00E26FE0 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE51E026F7A90E00E26FE0 /* CustomShape.swift */; };
+		84EE9D0E26DE1F6D003580BB /* BindingViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE9D0D26DE1F6D003580BB /* BindingViewModels.swift */; };
 		84F108C5264D792A00E769CC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F108C4264D792A00E769CC /* ImagePicker.swift */; };
 		84F108C9264D886100E769CC /* PermissionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F108C8264D886100E769CC /* PermissionAlert.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +56,12 @@
 		8493BF43264D221700CF131C /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		84AF8A5425B758320096C840 /* ProtocolTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTestView.swift; sourceTree = "<group>"; };
 		84DBEB2625874537008DC8B9 /* RedrawTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedrawTest.swift; sourceTree = "<group>"; };
+		84DE51CC26F7A5EB00E26FE0 /* TestMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMapView.swift; sourceTree = "<group>"; };
+		84DE51CD26F7A5EB00E26FE0 /* TestLazyGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLazyGrid.swift; sourceTree = "<group>"; };
+		84DE51CE26F7A5EC00E26FE0 /* TestPolyMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPolyMap.swift; sourceTree = "<group>"; };
+		84DE51DF26F7A90E00E26FE0 /* MultipleSelectionPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleSelectionPicker.swift; sourceTree = "<group>"; };
+		84DE51E026F7A90E00E26FE0 /* CustomShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
+		84EE9D0D26DE1F6D003580BB /* BindingViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingViewModels.swift; sourceTree = "<group>"; };
 		84F108C4264D792A00E769CC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		84F108C8264D886100E769CC /* PermissionAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				7AD9A81E255B02E000DF35DD /* BindingList.swift */,
+				84EE9D0D26DE1F6D003580BB /* BindingViewModels.swift */,
 				84DBEB2625874537008DC8B9 /* RedrawTest.swift */,
 				844E0ED22672743000E7FCFE /* RedrawTest2.swift */,
 				7AD8526725498C2800FD8A90 /* MyProductApp.swift */,
@@ -92,6 +105,8 @@
 				8493BF34264BC0DD00CF131C /* CropImageViewTest.swift */,
 				8493BF36264BC0E500CF131C /* CropImageView.swift */,
 				8493BF3A264BD1BD00CF131C /* CodeScannerView.swift */,
+				84DE51E026F7A90E00E26FE0 /* CustomShape.swift */,
+				84DE51DF26F7A90E00E26FE0 /* MultipleSelectionPicker.swift */,
 				8493BF43264D221700CF131C /* PermissionManager.swift */,
 				84F108C8264D886100E769CC /* PermissionAlert.swift */,
 				84817B4626725049002F2F9D /* LayoutTest.swift */,
@@ -99,6 +114,9 @@
 				84F108C4264D792A00E769CC /* ImagePicker.swift */,
 				8493BF3C264C0ACB00CF131C /* Scan */,
 				8493BF38264BC38900CF131C /* TestsImagesAndScanner.swift */,
+				84DE51CD26F7A5EB00E26FE0 /* TestLazyGrid.swift */,
+				84DE51CC26F7A5EB00E26FE0 /* TestMapView.swift */,
+				84DE51CE26F7A5EC00E26FE0 /* TestPolyMap.swift */,
 				84AF8A5425B758320096C840 /* ProtocolTestView.swift */,
 				7AD8526B25498C2800FD8A90 /* Assets.xcassets */,
 				7AD8527025498C2800FD8A90 /* Info.plist */,
@@ -194,17 +212,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DE51D126F7A5EC00E26FE0 /* TestPolyMap.swift in Sources */,
 				7AD8526A25498C2800FD8A90 /* ContentView.swift in Sources */,
+				84DE51D026F7A5EC00E26FE0 /* TestLazyGrid.swift in Sources */,
 				844E0ED32672743000E7FCFE /* RedrawTest2.swift in Sources */,
 				8493BF3B264BD1BE00CF131C /* CodeScannerView.swift in Sources */,
 				8493BF3E264C0AD400CF131C /* APIManager.swift in Sources */,
 				84F108C5264D792A00E769CC /* ImagePicker.swift in Sources */,
+				84DE51CF26F7A5EC00E26FE0 /* TestMapView.swift in Sources */,
+				84DE51E226F7A90E00E26FE0 /* CustomShape.swift in Sources */,
 				84F108C9264D886100E769CC /* PermissionAlert.swift in Sources */,
 				84AF8A5525B758320096C840 /* ProtocolTestView.swift in Sources */,
 				8493BF39264BC38900CF131C /* TestsImagesAndScanner.swift in Sources */,
 				8493BF40264C113F00CF131C /* UPCItem.swift in Sources */,
 				8493BF44264D221700CF131C /* PermissionManager.swift in Sources */,
 				844E0ED12672654C00E7FCFE /* AnotherTestLayout.swift in Sources */,
+				84EE9D0E26DE1F6D003580BB /* BindingViewModels.swift in Sources */,
 				84817B4726725049002F2F9D /* LayoutTest.swift in Sources */,
 				7AD8526825498C2800FD8A90 /* MyProductApp.swift in Sources */,
 				8493BF42264C127C00CF131C /* UPCItemTest.swift in Sources */,
@@ -212,6 +235,7 @@
 				8493BF35264BC0DD00CF131C /* CropImageViewTest.swift in Sources */,
 				84DBEB2725874537008DC8B9 /* RedrawTest.swift in Sources */,
 				8493BF37264BC0E500CF131C /* CropImageView.swift in Sources */,
+				84DE51E126F7A90E00E26FE0 /* MultipleSelectionPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
